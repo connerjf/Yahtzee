@@ -1,0 +1,138 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Yahtzee Game! </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="game.js"></script>
+</head>
+
+<body>
+  <main>
+    <table id="scores">
+      <tr>
+        <th>Category</th>
+        <th>You</th>
+        <th>Computer</th>
+      </tr>
+      <tr>
+        <td>1's</td>
+        <td id="Y1" class="category" onclick="calculateOnes()"></td>
+        <td id="C1"></td>
+      </tr>
+      <tr>
+        <td>2's</td>
+        <td id="Y2" class="category" onclick="calculateTwos()"></td>
+        <td id="C2"></td>
+      </tr>
+      <tr>
+        <td>3's</td>
+        <td id="Y3" class="category" onclick="calculateThrees()"></td>
+        <td id="C3"></td>
+      </tr>
+      <tr>
+        <td>4's</td>
+        <td id="Y4" class="category" onclick="calculateFours()"></td>
+        <td id="C4"></td>
+      </tr>
+      <tr>
+        <td>5's</td>
+        <td id="Y5" class="category" onclick="calculateFives()"></td>
+        <td id="C5"></td>
+      </tr>
+      <tr>
+        <td>6's</td>
+        <td id="Y6" class="category" onclick="calculateSixes()"></td>
+        <td id="C6"></td>
+      </tr>
+      <tr>
+        <th>Upper Section Raw Score</th>
+        <th id="YUR"></th>
+        <th id="CUR"></th>
+      </tr>
+      <tr>
+        <th>Bonus</th>
+        <th id="YB"></th>
+        <th id="CB"></th>
+      </tr>
+      <tr>
+        <th>Upper Section Score</th>
+        <th id="YUS"></th>
+        <th id="CUS"></th>
+      </tr>
+      <tr>
+        <td>3 of a Kind</td>
+        <td id="Y3K" class="category" onclick="calculate3K()"></td>
+        <td id="C3K"></td>
+      </tr>
+      <tr>
+        <td>4 of a Kind</td>
+        <td id="Y4K" class="category" onclick="calculate4K()"></td>
+        <td id="C4K"></td>
+      </tr>
+      <tr>
+        <td>Small Straight</td>
+        <td id="YSS" class="category" onclick="calculateSmallStraight()"></td>
+        <td id="CSS"></td>
+      </tr>
+      <tr>
+        <td>Large Straight</td>
+        <td id="YLS" class="category" onclick="calculateLargeStraight()"></td>
+        <td id="CLS"></td>
+      </tr>
+      <tr>
+        <td>Full House</td>
+        <td id="YFH" class="category" onclick="calculateFullHouse()"></td>
+        <td id="CFH"></td>
+      </tr>
+      <tr>
+        <td>Yahtzee</td>
+        <td id="YY" class="category" onclick="calculateYahtzee()"></td>
+        <td id="CY"></td>
+      </tr>
+      <tr>
+        <td>Yahtzee Bonus</td>
+        <td id="YB" class="category" onclick="calculateYahtzeeBonus()"></td>
+        <td id="CB"></td>
+      </tr>
+      <tr>
+        <td>Chance</td>
+        <td id="YC" class="category" onclick="calculateChance()"></td>
+        <td id="CC"></td>
+      </tr>
+      <tr>
+        <th>Lower Section Score</th>
+        <th id="YLSS"></th>
+        <th id="CLSS"></th>
+      </tr>
+      <tr>
+        <th>Upper Section Score</th>
+        <th id="YUS"></th>
+        <th id="CUS"></th>
+      </tr>
+      <tr>
+        <th>Total Score</th>
+        <th id="YTS"></th>
+        <th id="CTS"></th>
+      </tr>
+    </table>
+
+    <table id="dice">
+      <tr>
+        <th id="rollNum" colspan="5">Roll Number = 0</th>
+      </tr>
+      <tr>
+        <td id="dice0" class="holdButtons" value="hold" onclick="toggleHold(0, 'dice0')">0</td>
+        <td id="dice1" class="holdButtons" value="hold" onclick="toggleHold(1, 'dice1')">0</td>
+        <td id="dice2" class="holdButtons" value="hold" onclick="toggleHold(2, 'dice2')">0</td>
+        <td id="dice3" class="holdButtons" value="hold" onclick="toggleHold(3, 'dice3')">0</td>
+        <td id="dice4" class="holdButtons" value="hold" onclick="toggleHold(4, 'dice4')">0</td>
+      </tr>
+    </table>
+    <button id="rollButton" onclick="roll(dice)">Roll Dice</button>
+
+  </main>
+</body>

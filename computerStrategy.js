@@ -354,3 +354,44 @@ function computerHolding() {
     }
     console.log("somethings not right");
   }
+
+  function scratcher() {
+    if (computerScores[1] == 0 && twos.length >= 1) {
+      computerScores[1] = twos.length;
+      $('#C2').html(computerScores[1]);
+    } else if (computerScores[13] == 0) {
+      computerScores[13] = diceScore();
+      $('#CC').html(computerScores[13]);
+    } else if (computerScores[11] == 0) {
+      computerScores[13] = "s";
+      $('#CY').html(computerScores[13]);
+    } else if (computerScores[9] == 0) {
+      computerScores[9] = "s";
+      $('#CLS').html(computerScores[9]);
+    } else if (computerScores[7] == 0) {
+      computerScores[7] = "s";
+      $('#C4K').html(computerScores[7]);
+    } else if (computerScores[8] == 0) {
+      computerScores[8] = "s";
+      $('#CSS').html(computerScores[8]);
+    } else if (computerScores[6] == 0) {
+      computerScores[6] = "s";
+      $('#C3K').html(computerScores[6]);
+    } else if (computerScores[10] == 0) {
+      computerScores[10] = "s";
+      $('#CFH').html(computerScores[10]);
+    } else if (computerScores[2] == 0) {
+      computerScores[2] = "s";
+      $('#C3').html(computerScores[2]);
+    } else if (computerScores[3] == 0) {
+      computerScores[3] = "s";
+      $('#C4').html(computerScores[3]);
+    } else if (computerScores[4] == 0) {
+      computerScores[4] = "s";
+      $('#C5').html(computerScores[4]);
+    } else if (computerScores[5] == 0) {
+      computerScores[5] = "s";
+      $('#C6').html(computerScores[5]);
+    }
+    console.log("scratched something!");
+  }
